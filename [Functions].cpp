@@ -12,12 +12,28 @@ double areaTriangle (double, double);
 int main()
 {
     int choice;
+    char cont;
+    do
+    {
 
+    system("cls");
     inimenu();
 
     cin >> choice;
 
     menuD (choice);
+
+    do
+    {
+
+
+    cout << "Do you want to continue the program? (Y/N)" << endl;
+    cin >> cont;
+    }
+    while(cont != 'y' && cont != 'Y' && cont != 'n' && cont != 'N');
+
+    }
+    while (cont == 'y' || cont == 'Y');
 
     return 0;
 }
